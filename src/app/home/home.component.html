@@ -1,0 +1,15 @@
+<mat-card class="teacher-card" *ngFor="let teacher of teachers">
+    <mat-card-header style="background-color: #b5b53f;">
+        <mat-card-title style="color:white;">{{teacher.name}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content style="margin-top: 10px;">
+        <p>Department: <strong>{{teacher.department}}</strong> </p>
+        <p>Qualification: <strong>{{teacher.qualification}}</strong> </p>
+        <p>Address: <strong>{{teacher.address}}</strong> </p>
+        <p>Date of Birth: <strong>{{teacher.dob | date:'MMM d, y'}}</strong> </p>
+        <p>Gender: <strong>{{teacher.gender}}</strong></p>
+    </mat-card-content>
+
+    
+</mat-card>
