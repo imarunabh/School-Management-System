@@ -21,7 +21,6 @@ const routes: Routes = [
   { path: "teacher",component:PostTeacherComponent,canActivate:[AdminGuard]},
   { path: "teachers",component:GetAllTeachersComponent,canActivate:[AdminGuard]},
   { path: "teacher/:teacherId",component:UpdateTeacherComponent,canActivate:[AdminGuard]}
-
 ];
 
 @NgModule({

@@ -37,13 +37,14 @@ export class LoginComponent {
       this.loginForm.get(['password'])!.value,
     ).subscribe((response)=>{
       console.log(response);
+      
       if(StorageService.isAdminLoggedIn()){
+        
         this.router.navigateByUrl("admin/dashboard");
       }
       else if(StorageService.isStudentLoggedIn()){
         this.router.navigateByUrl("student/dashboard");
       }
-      
     }),
       error => {
       if(error.status == 406){

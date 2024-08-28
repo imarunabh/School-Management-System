@@ -42,7 +42,7 @@ export class StorageService {
 
   static getUserRole():string{
     const user = this.getUser();
-    if(user == null){
+    if(user==null){
       return '';
     }
     return user.role;
@@ -53,10 +53,7 @@ export class StorageService {
       return false;
     }
     const role:string = this.getUserRole();
-
     return role=="ADMIN";
-
-
   }
 
   static isStudentLoggedIn():boolean{
@@ -65,9 +62,9 @@ export class StorageService {
     }
     const role:string = this.getUserRole();
     return role == "STUDENT";
-
-
   }
+
+
   static logout(){
     window.localStorage.removeItem(TOKEN);
     window.localStorage.removeItem(USER);

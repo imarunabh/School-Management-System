@@ -1,5 +1,4 @@
 import { HttpClient, HttpResponse } from '@angular/common/http';
-import { TaggedTemplateExpr } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable, map, tap } from 'rxjs';
 import { StorageService } from '../storage/storage.service';
@@ -29,14 +28,11 @@ export class AuthService {
     const bearerToken = res.headers.get(AUTH_HEADER).substring(7,tokenLength);
     this.storage.saveToken(bearerToken);
     return res;
-
-
   }
   ))
   }
 
   log(message:string){
     console.log(message)
-
   }
 }

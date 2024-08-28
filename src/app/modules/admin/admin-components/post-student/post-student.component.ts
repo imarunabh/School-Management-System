@@ -56,7 +56,6 @@ export class PostStudentComponent {
     this.service.addStudent(this.validateForm.value).subscribe((res)=>{
       console.log(res);
     })
-  
   }
 
 

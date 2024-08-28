@@ -38,7 +38,7 @@ export class PostTeacherComponent {
   }
 
   postTeacher(){
-    console.log(this.validateForm.value);
+    
     this.adminService.postTeacher(this.validateForm.value).subscribe((res)=>{
       console.log(res);
       if(res.id!=null){
